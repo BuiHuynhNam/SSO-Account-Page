@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Account Page</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="indexRTWork.css">
+      <!-- <link rel="stylesheet" href="indexRTSurvey.css"> -->
+      <!-- <link rel="stylesheet" href="indexRTHome.css"> -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   </head>
+   <body>
+      <div class="header display-flex" style="justify-content: space-between;">
+         <div class="brand-name display-flex" style="width: 220px; height: 50px; align-items: center;">
+            <img src="./img/icon-app-rtwork-1.png" alt="rthome" width="36px">
+
+            <!-- <img src="./img/icon-app-rtsurvey.png" alt="rthome" width="36px"> -->
+            <!-- <img src="./img/icon-app-rthome.png" alt="rthome" width="36px"> -->
+
+            <span class="r-ta" style="font-size: 18px; padding-left: 10px;">Real-Time Account</span>
+         </div>
+         <div class="display-flex" style="width: 220px; height: 50px; align-items: center; justify-content: flex-end;">
+            <div class="dropdown" data-toggle="dropdown">
+               <div class="language dropbtn" >
+                  <img id="toggle-image" src="./img/en.svg" alt="rthome" width="32px">
+                  <i style="margin-left:2px; font-size:12px; color:white;" class="fa fa-angle-down"></i>
+               </div>
+               <div id="myDropdown" class="dropdown-content display-none" style="background-color:#ffffff; margin-left: -212px; min-width: 275px; margin-top: -7px; box-shadow: 2px 2px 5px 0px #42424261; border-radius: 4px;">
+                  <a id="en-lang" style="margin-top:6px; font-size: 14px;" href="#" class="lang-actived"> 
+                     <img style="margin-right: 10px;" src="./img/en.svg" alt="rthome" width="26px">English (US)
+                  </a>
+                  <a id="vn-lang" style="margin-bottom:6px; font-size: 14px;" href="#" class="">
+                     <img style="margin-right: 10px;" src="./img/vn.svg" alt="rthome" width="26px">Tiếng Việt
+                  </a>
+               </div>
+            </div>
+            <!--<div class="dropdown">
+               <div class="avatar dropbtn" style="padding: 6px;">
+                  <img src="./img/avatar.png" alt="rthome" width="36px" >
+               </div>
+               <div id="myDropdown1" class="dropdown-content display-none" style="background-color:#ffffff; margin-left: -226px; min-width: 274px; margin-top: -6px; box-shadow: 2px 2px 5px 0px #42424261; border-radius: 4px;">
+                  <a class="signout color-gray" style="font-size: 14px;" href="#">Sign Out</a>
+               </div> -->
+            </div>
+         </div>
+      </div>
+
+      <!-- Progess Bar -->
+      <div id="myProgress" class="display-none;" style="position: absolute;">
+         <div id="myBar"></div>
+      </div>
+
+      <div class="row opacity">
+         <div class="col-2 menu">
+            <ul class="item-list" style="background-color: #ffffff; height: 800px; padding-top: 10px">
+               <li class="account color-gray item-actived">
+                  <i style="font-size: 18px;" class="fa fa-user-circle" aria-hidden="true"></i>
+                  <span class="item-text" style="margin-left: 6px; font-size: 14px;">Account</span>
+               </li>
+               <a href="./password.html" class="pwd color-gray" style="text-decoration: none;">
+                  <li >
+                     <i style="font-size: 20px; margin-left: 3px;" class="fa fa-lock" aria-hidden="true"></i>
+                     <span class="item-text1" style="margin-left: 8px; font-size: 14px;">Password</span>
+                  </li>
+               </a>
+            </ul>
+         </div>
+
+         <div class="edit-info col-10" style="padding-left: 0; padding-top: 20px;">
+            <span class="edit" style="font-size: 24px; display: block; margin-bottom: 10px;">Edit Account</span>
+            <span style="font-size: 14px; color: #697882"><span style="color: red;">*</span> Required field</span>
+         </div>
+
+         <div class="many-inputs col-10" style="background-color: #ffffff; height: 712px;">
+            <div class="col-12" style="padding: 0;">
+               <div class="col-8 notif">
+                  <i style="font-size: 24px;" class="fa fa-check" aria-hidden="true"></i>
+                  <span style="font-size: 16px; font-weight: 400; margin-left: 10px;">
+                     Your account has been updated.
+                  </span>
+               </div>
+            </div>
+
+            <div class=" col-3 color-gray" style="background-color: #ffffff; height: 500px;">
+               <h4 style="font-weight: 400; font-size: 16px;">Username</h4>
+               
+               <h4 style="margin-top: 40px; font-weight: 400; font-size: 16px;">Email <span style="color: red;">*</span></h4>
+               
+               <h4 style="margin-top: 40px; font-weight: 400; font-size: 16px;">Phone Number</h4>
+               
+               <h4 style="margin-top: 36px; font-weight: 400; font-size: 16px;">Full Name <span style="color: red;">*</span></h4>
+            </div>
+
+            <div class="name-of-input col-5" style="padding-right: 0;">
+               <div class="wrap-first-field">
+                  <h5 class="u-mobile display-none" style="margin-top: 3px; margin-bottom: 5px;">Username</h5>
+                  <input class="field" type="text" style="width: 100%; height: 38px; margin-top: 10px;" value="nambui@rta.vn">
+               </div>
+               <div class="wrap-field">
+                  <h5 class="u-mobile display-none" style="margin-top: -18px; margin-bottom: 5px;">Email <span style="color: red;">*</span></h5>
+                  <input class="field" type="text" style="width: 100%; height: 38px; margin-top: 20px;" value="nambui@rta.vn">
+               </div>
+               <div class="wrap-field">
+                  <h5 class="u-mobile display-none" style="margin-top: -18px; margin-bottom: 5px;">Phone Number</h5>
+                  <input class="field" type="text" style="width: 100%; height: 38px; margin-top: 20px;" value="0771111111">
+               </div>
+               <div class="wrap-field">
+                  <h5 class="u-mobile display-none" style="margin-top: -18px; margin-bottom: 5px;">Full Name <span style="color: red;">*</span></h5>
+                  <input class="field2" type="text" style="width: 100%; height: 38px; margin-top: 20px; background-color: #ffffff; border-radius: 4px !important; border: 0.5px solid #678098;" value="Nam Huynh Bui">
+               </div>
+               <div id="two-buttons" class="display-flex" style="margin-top: 20px;">
+                  <button class="btn-cancel">Cancel</button>
+                  <button onClick="topFunction()" class="btn-save">Save</button>
+               </div>
+            </div>
+         </div>
+      </div>
+         <!-- <div class="footer">
+         
+         </div> -->
+   </body>
+</html>
+
+
+<script>
+   // Make different activity between large and small screen
+   $(window).resize(function() {
+      if ($(this).width() < 769) {
+         $(".account").removeClass("item-actived");
+         $(".account").addClass("item-actived-small-screen");
+
+         $(".item-list").find( ".item-actived" ).removeClass("item-actived").addClass("item-actived-small-screen");
+        
+         // $(".pwd").click(function() {
+         //    $(".pwd").addClass("item-actived-small-screen");
+         //    $(".account").removeClass("item-actived-small-screen");
+         //    $(".item-list").find( ".item-actived" ).removeClass("item-actived").addClass("item-actived-small-screen");
+         // });
+
+         // $(".account").click(function() {
+         //    $(".pwd").removeClass("item-actived-small-screen");
+         //    $(".account").addClass("item-actived-small-screen");
+         //    $(".item-list").find( ".item-actived" ).removeClass("item-actived").addClass("item-actived-small-screen");
+         // });
+     
+      } else {
+         $(".account").addClass("item-actived");
+         $(".account").removeClass("item-actived-small-screen");
+
+         // $(".item-list").find( ".item-actived-small-screen" ).removeClass("item-actived-small-screen").addClass("item-actived");
+
+         // $(".pwd").click(function() {
+         //    $(".pwd").addClass("item-actived");
+         //    $(".account").removeClass("item-actived");
+         // });
+
+         // $(".account").click(function() {
+         //    $(".pwd").removeClass("item-actived");
+         //    $(".account").addClass("item-actived");
+         // });
+      }
+   });
+
+   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      
+      $(".account").removeClass("item-actived");
+      $(".account").addClass("item-actived-small-screen");
+
+      // $(".pwd").click(function() {
+      //       $(".pwd").addClass("item-actived-small-screen");
+      //       $(".account").removeClass("item-actived-small-screen");
+      //   });
+
+      // $(".account").click(function() {
+      //    $(".pwd").removeClass("item-actived-small-screen");
+      //    $(".account").addClass("item-actived-small-screen");
+      // });
+
+   } else {
+      $(".account").addClass("item-actived");
+      $(".account").removeClass("item-actived-small-screen");
+
+      // $(".pwd").click(function() {
+      //       $(".pwd").addClass("item-actived");
+      //       $(".account").removeClass("item-actived");
+      // });
+
+      // $(".account").click(function() {
+      //    $(".pwd").removeClass("item-actived");
+      //    $(".account").addClass("item-actived");
+      // });
+   }
+
+   // Toggle dropdown language - avatar
+   $(".language").click(function() {
+      if( $(".language").hasClass("bg-active") ) {
+         $("#myDropdown").addClass("display-none");
+         $(".language").removeClass("bg-active");
+      } else {
+         $("#myDropdown").removeClass("display-none");
+         $("#myDropdown1").addClass("display-none");
+         $(".language").addClass("bg-active");
+         $(".avatar").removeClass("bg-active");
+      }
+   });
+
+   $(".avatar").click(function() {
+      if( $(".avatar").hasClass("bg-active") ) {
+         $("#myDropdown1").addClass("display-none");
+         $(".avatar").removeClass("bg-active");
+      } else {
+         $("#myDropdown").addClass("display-none");
+         $("#myDropdown1").removeClass("display-none");
+         $(".language").removeClass("bg-active");
+         $(".avatar").addClass("bg-active");
+      }
+   });
+
+
+   // Change language 
+   $("#vn-lang").click(function() {
+      $("#en-lang").removeClass("lang-actived");
+      $("#vn-lang").addClass("lang-actived");
+      $('#toggle-image').attr('src', './img/vn.svg');
+
+      $("#myDropdown").addClass("display-none");
+      $(".language").removeClass("bg-active");
+      
+   });
+
+   $("#en-lang").click(function() {
+      $("#en-lang").addClass("lang-actived");
+      $("#vn-lang").removeClass("lang-actived");
+      $('#toggle-image').attr('src', './img/en.svg');
+
+      $("#myDropdown").addClass("display-none");
+      $(".language").removeClass("bg-active");
+     
+   });
+
+   // Close dropdown 
+   $(document).on("click", function(event){
+      var $trigger = $(".dropdown");
+      if($trigger !== event.target && !$trigger.has(event.target).length){
+         $("#myDropdown").addClass("display-none");
+         $("#myDropdown1").addClass("display-nones");
+         $(".language").removeClass("bg-active");
+         $(".avatar").removeClass("bg-active");
+      }            
+   });
+
+   // Scroll top to see confirmation
+   function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+   }
+
+   $('.notif').hide();
+
+   $(".btn-save").on("click", function(){      
+      $('.notif').fadeIn(2000);      
+      setTimeout(() => {
+         $('.notif').fadeOut(1500); 
+      }, 3000);  
+   });
+
+   // Make progressbar  
+   var i = 0;
+   function move() {
+      if (i == 0) {
+         i = 1;
+         var elem = document.getElementById("myBar");
+         var width = 1;
+         var id = setInterval(frame, 8);
+         function frame() {
+            if (width >= 100) {
+               clearInterval(id);
+               i = 0;
+               } else {
+               width++;
+               elem.style.width = width + "%";
+            }
+         }
+      }
+   }
+   $("#myProgress").removeClass("display-none");
+   move();
+   setTimeout(() => {
+      $("#myProgress").addClass("display-none");
+      $(".row").removeClass("opacity");
+   }, 800);
+  
+</script>
